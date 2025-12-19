@@ -18,7 +18,7 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #cd87ff, #77a7ff);
+        background: linear-gradient(to bottom, #ffffff, #a4c4ff);
         color: #fff;
         margin: 0;
         padding: 0;
@@ -37,6 +37,94 @@
         margin-bottom: 10px;
         box-shadow: 0 0 15px #c881ff;
       }
+
+      html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}   
+     footer {
+            background-color: #bd72fa;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+             position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #c081f7;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10;
+        z-index: 100;
+        height: 50px;
+        }
+
+        .projects-section {
+max-width: 1000px;
+margin: 60px auto;
+padding: 20px;
+text-align: center;
+}
+
+
+.projects-section h1 {
+font-size: 36px;
+margin-bottom: 8px;
+}
+
+
+.projects-section p {
+color: #f1f1f1;
+margin-bottom: 40px;
+}
+
+
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+}
+
+
+.project-card {
+background: #ffffff;
+color: #333;
+padding: 22px;
+border-radius: 14px;
+box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+text-align: left;
+}
+
+
+.project-card h3 {
+margin: 0 0 10px;
+font-size: 20px;
+}
+
+
+.project-card p {
+font-size: 14px;
+color: #555;
+margin-bottom: 14px;
+}
+
+
+.project-links a {
+display: inline-block;
+margin-right: 10px;
+padding: 8px 14px;
+font-size: 13px;
+text-decoration: none;
+border-radius: 6px;
+background: #6c63ff;
+color: #fff;
+}
+
+
+.project-links a:hover {
+opacity: 0.9;
+}
     </style>
   </head>
   <body>
@@ -83,8 +171,66 @@
           <li class="nav-item">
             <a class="nav-link" href="gallery.html">Gallery & Game Clips</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="gaming.html">Gaming</a>
+            </li>
         </ul>
       </div>
     </nav>
+    
+    <section class="projects-section">
+<h1>My Coding Projects</h1>
+<p>Projects you can view and try</p>
+
+
+<div class="projects-grid">
+
+
+<div class="project-card">
+<h3>🎲 Rolling Dice</h3>
+<p>A simple JavaScript dice with start, stop, and reset features.</p>
+<div class="project-links">
+
+<a href="https://github.com/Forker7/Day-36-Rolling-Dice-app-using-JS.git">Source Code</a>
+</div>
+</div>
+
+
+<div class="project-card">
+<h3>⏱️ Stopwatch</h3>
+<p>A simple Javasricpt stopwatch with start, stop and roll.</p>
+<div class="project-links">
+
+<a href="https://github.com/Forker7/Day-35-Stopwatch-using-JS.git">Source Code</a>
+</div>
+</div>
+
+
+<div class="project-card">
+<h3>⏰ Digital Clock</h3>
+<p>Digital CLock built with HTML and JS.</p>
+<div class="project-links">
+
+<a href="https://github.com/Forker7/New-folder.git">Source Code</a>
+</div>
+
+
+</div>
+
+<div class="project-card">
+<h3>📃 To Do List</h3>
+<p>To Do List built with HTML and JS.</p>
+<div class="project-links">
+
+<a href="https://github.com/Forker7/New-folder.git">Source Code</a>
+</div>
+</div>
+</section>
+
+
+</body>
+     <footer>
+    <p>© 2025 Ayush Kushwaha. All rights reserved.</p>
+    </footer>
   </body>
 </html>

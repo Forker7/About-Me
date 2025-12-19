@@ -1,177 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ayush's Introduction</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush's Portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #ea580c;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+body{
+  background: var(--bg-color);
+  color: var(--bg-color);
+}
 
-    <style>
-      /* General body styling */
-      body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #cd87ff, #77a7ff);
-        color: #fff;
-        margin: 0;
-        padding: 0;
-      }
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 15%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
 
-      /* Home Section Styling */
-      .home-section {
-        max-width: 750px;
-        margin: 80px auto;
-        padding: 30px 25px;
-        text-align: left;
-        line-height: 1.6;
-        background: linear-gradient(
-          to bottom,
-          #98d7ff,
-          #77a7ff
-        ); /* semi-transparent dark background */
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      }
+#menu-icon{
+  font-size: 3.5rem;
+  color: var(--main-color);
+  display: none;
+}
 
-      /* Main greeting */
-      .home-section h3 {
-        font-size: 26px;
-        margin-bottom: 20px;
-        color: #ffd700; /* golden heading color */
-      }
+.logo{
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
 
-      /* Paragraphs */
-      .home-section p {
-        font-size: 17px;
-        margin-bottom: 12px;
-      }
+.logo:hover{
+  transform:scale(1.1)
+}
 
-      /* Emoji style */
-      .home-section span.emoji {
-        display: inline-block;
-        margin-left: 2px;
-      }
+span{
+  background: linear-gradient(
+    270deg,
+    #ff9500 10%,
+     #ffff00 100%
+  );
+  background-clip: text;
+  color:transparent;
+  
+}
 
-      /* Navbar brand spacing */
-      .navbar-brand {
-        margin-left: 15px; /* moves logo slightly to the right */
-      }
+.navbar a{
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid  transparent;
+}
 
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 3px solid #c881ff;
-        object-fit: cover;
-        margin-bottom: 10px;
-        box-shadow: 0 0 15px #c881ff;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container-fluid p-0">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img
-            src="channels4_profile.jpg"
-            id="img1"
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=""
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <!-- removed ms-auto so links stay on the left -->
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="skills.html">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Contacts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="hobbies.html">Hobbies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="coding.html">Coding Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery & Game Clips</a>
-            </li>
-          </ul>
-        </div>
+.navbar a:hover{
+  color: #ffff00;
+  border-bottom: 3px solid #ffff00;
+}
+
+.gradient-btn{
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: linear-gradient(
+    270deg,
+     #ff9500 10%,
+     #ffff00 100%
+  );
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: #ffffff;
+  border: none;
+  text-wrap: nowarp;
+}
+.gradient-btn:hover{
+  transform: scale(1.05)
+}
+
+section{
+  min-height: 100vh;
+  padding:10rem 15%;
+}
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.content{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.content h1{
+  font-size: 8rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+  color: #ffffff;
+ 
+}
+
+.content h3 {
+  margin: 1rem 0;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.content p{
+  font-size:1.5rem;
+  font-weight:500;
+  line-height:1.8;
+  color: #ffffff;
+}
+
+.home-img img{
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #ffff00;
+  transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover{
+  box-shadow: 0 0 25px #ffff00,
+              0 0 50px #ffff00,
+              0 0 100px #ffff00;
+  
+}
+
+#dl {
+  font-size: 6rem;
+  
+}
+
+#dl2 {
+  font-size: 2.9rem;
+  
+}
+
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px soild #ffff00;
+  border-radius:50%;
+  color: #ffff00;
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover{
+  color: #000000;
+  background-color: #ffff00;
+  transform: scale(1.2)translateY(-5px);
+  box-shadow:0 0 25px #ffff00;
+}
+
+.btn-group{
+  display: flex;
+  gap:1.5rem;
+}
+
+.btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: #ffff00;
+  box-shadow: 0 0 25px #ffff00;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color:#080808;
+  border: 2px soild transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  
+}
+
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ffff00,
+              0 0 50px #ffff00;
+              
+}
+
+.btn-group a:nth-of-type(2){
+  background-color: #080808;
+  color: #ffff00;
+  border: 2px soild #ffff00;
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover{
+  box-shadow:0 0 25px #ffff00;
+  background-color: #ffff00;
+  color: #080808;
+
+}
+
+.about{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10rem;
+ background: var(--second-bg-color);
+}
+
+.about-img img{
+  width:32vw;
+  border: 50%;
+  box-shadow: 0 0 25px #ffff00;
+  transition: 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.about-img img:hover{
+  box-shadow: 0 0 25px #ffff00,
+              0 0 50px #ffff00
+              0 0 100px #ffff00;
+}
+
+.about-content h2{
+  font-size: 7rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.about-content p {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.about-content .btn{
+  margin: 3rem 0;
+}
+
+::-webkit-scrollbar{
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ffff00;
+}
+
+::-webkit-scrollbar-track{
+  background-color: var(--bg-color);
+}
+
+.heading{
+  text-align:center ;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+
+.skills{
+  background-color: var(--bg-color);
+  color: #000000;
+}
+
+.skills h2{
+  color: var(--text-color)
+}
+
+.skills-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(
+    300px, 1fr
+  ));
+  align-items: center;
+  gap: 2.5rem;
+  
+}
+
+.skills-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff00;
+  height:600px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border:5px soild transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.skills-box:hover{
+  background: var(--second-bg-color);
+  color:#ffff00;
+  border: 5px soild #ffff00;
+  transform: scale(1.03);
+  gap: 5rem;
+}
+
+.skills-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  
+}
+
+.skills-info h4{
+  font-size: 4rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.skills-info p{
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.skills-info i{
+  font-size: 8rem;
+}
+  </style>
+</head>
+<body>
+     <header class="header">
+      <a href="#home" class="logo">
+        Ayush <span>Kushwaha</span>
+      </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" >Home</a>
+        <a href="#about" >About</a>
+        <a href="#skills" >Skills</a>
+        <a href="#projects" >Projects</a>
+        <a href="#contact" >Contacts</a>
       </nav>
 
-      <!-- Home Section -->
-      <div class="home-section">
-        <img
-          src="Ayush (1).jpg"
-          alt="Your Photo"
-          style="
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 3px solid #faf600;
-            object-fit: cover;
-            margin-bottom: 10px;
-            box-shadow: 0 0 15px #faf600;
-            display: block; /* make it a block element */
-            margin-left: auto;
-            margin-right: auto;
-          "
-        />
+      <button class="gradient-btn">Contact Me</button>
+
+
+     </header>
+
+     <section class="home" id="home">
+      <div class="content">
+        
+        <h1 id="dl">Hi, It's <span id="dl">Ayush</span></h1>
         <h3>
-          Hi there! I'm Ayush Kushwaha 👋, a tech enthusiast, student, and
-          cricket fan.
+          I'm a <span id="dl2">Web Developer</span>
         </h3>
-        <p>
-          I enjoy exploring the world of coding 💻, trying out new concepts, and
-          creating small but functional projects. I learn something new from
-          every line of code, and I love bringing concepts to life 🔧✨.
-        </p>
-        <p>
-          But screens aren't the only thing in life! I also have a strong
-          interest in cricket 🏏. I get inspiration for cooperation, strategy,
-          and concentration from watching my favorite players or playing games
-          with friends. It's all about preparation, practice, and having fun
-          with the game, just like coding 🥇.
-        </p>
-        <p>
-          This website is my little online space 🌐, a blend of my passions,
-          curiosity, and inventiveness. Explore my endeavors, abilities, and
-          interests, and discover the true me!
-        </p>
-        <p></p>
+        <p id="dl3">A student and beginner web developer who enjoys creating websites and learning new technologies like HTML, CSS, and JavaScript. I’m passionate about improving my skills and building useful projects</p>
+        <div class="social-icons">
+          <a href="#" >
+            <i class="bx bxl-github"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@Forker7" >
+            <i class="bx bxl-youtube"></i>
+          </a>
+
+          <a href="#" >
+            <i class="bx bxl-discord-alt"></i>
+          </a>
+
+          
+        </div>
+
+        <div class="btn-group">
+          <a href="#contact" class="btn">Contact</a>
+        </div>
       </div>
-    </div>
-  </body>
+
+      <div class="home-img">
+        <img src="Ayush (1).png" alt="">
+      </div>
+     </section>
+
+     <section class="about" id="about">
+      <div class="about-img">
+        <img src="Ayush (1).png" alt="" class="about-img">
+      </div>
+
+      <div class="about-content">
+        <h2>About <span>Me</span></h2>
+        <p>Hi, I’m Ayush Kushwaha. Also known as ItzFork. I’m a student who enjoys learning new things and exploring technology.
+I like coding very much and enjoy building small projects while learning HTML, CSS, and JavaScript.
+Coding helps me think logically and improve my problem-solving skills.
+I also love playing sports, especially cricket and table tennis.
+My favourite cricketer is Virat Kohli, and I admire his dedication and consistency.
+In table tennis, my favourite player is Ma Long because of his speed and technique.
+Playing sports keeps me active, focused, and disciplined.
+Apart from that, I really enjoy eating and trying different foods.
+I like snacks such as samosa, pani puri, and chatpate, along with meals like chicken curry.
+Overall, I enjoy balancing coding, sports, and food in my daily life.</p>
+
+      <a href="#" class="btn">Read More</a>
+      </div>
+     </section>
+     
+     <section class="skills" id="skills">
+      <h2 class="heading">Skills</h2>
+
+
+      <div class="skills-container">
+        <div class="skills-box">
+          <div class="skills-info">
+
+          <i class="bx bx-html5"></i>
+          <h4>Html</h4>
+          <p>I have a good understanding of HTML and use it to create well-structured web pages. I can build layouts using headings, paragraphs, lists, links, images, and forms. I also focus on writing clean and organized code to make websites easy to understand and use.
+
+          </p> </div>
+         <div class="skills-box">
+          <div class="skills-info"></div>
+
+          <i class="bx bx-css3"></i>
+          <h4>CSS</h4>
+          <p>I use CSS to style web pages and make them visually attractive. I can work with colors, fonts, layouts, and basic animations to create clean and responsive designs.
+            
+          </p>
+          
+          <div class="skills-box">
+          <div class="skills-info"></div>
+
+          <i class="bx bx-javascript"></i>
+          <h4>JS</h4>
+          <p>I use JavaScript to add interactivity to websites. I can create simple functions, handle events, and make web pages more dynamic and user-friendly.
+            
+          </p>
+        </div>
+       </div>
+
+        <div class="skills-box">
+          <div class="skills-info"></div>
+
+          <i class="bx bx-android"></i>
+          <h4>MIT App Inventor</h4>
+          <p>I use MIT App Inventor to create simple mobile applications. It helps me understand app logic, blocks-based programming, and how mobile apps work.
+            
+          </p>
+        </div>
+       </div>
+
+       <div class="skills-box">
+          <div class="skills-info"></div>
+
+          <i class="bx bx-dino"></i>
+          <h4>Scratch</h4>
+          <p>I use Scratch to create interactive stories, animations, and games. It helps me learn programming concepts like loops, conditions, and events in a fun way.
+            
+          </p>
+        </div>
+       </div>
+
+       <div class="skills-box">
+          <div class="skills-info"></div>
+
+          <i class="bx bx-table-tennis"></i>
+          <h4>Table Tennis</h4>
+          <p>Table tennis is a sport I enjoy playing regularly. I have learned fast serves, quick reflex shots, and smashes, which help improve my coordination and focus.
+            
+          </p>
+        </div>
+       </div>
+
+       <div class="skills-box">
+          <div class="skills-info"></div>
+
+          <i class="bx bx-cricket"></i>
+          <h4>Cricket</h4>
+          <p>Cricket is one of my favorite sports.
+             I have good defending batting skills and basic bowling skills,
+              and playing cricket teaches me teamwork and discipline.
+            
+          </p>
+        </div>
+       </div>
+      </div>
+
+        
+        
+     </section>
+</body>
 </html>
