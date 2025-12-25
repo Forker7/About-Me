@@ -1,518 +1,817 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayush's Portfolio</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush's Portfolio</title>
 
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
-  font-family: "Poppins";
-}
-:root {
-  --bg-color: #080808;
-  --second-bg-color: #101010;
-  --text-color: white;
-  --main-color: #ea580c;
-}
-html {
-  font-size: 60%;
-  overflow-x: hidden;
-}
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
 
-body{
-  background: var(--bg-color);
-  color: var(--bg-color);
-}
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        scroll-behavior: smooth;
+        font-family: "Poppins";
+      }
 
-.header{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 4rem 15%;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
+      :root {
+        --bg-color: #080808;
+        --second-bg-color: #101010;
+        --text-color: #ffffff;
+        --main-color: #ea580c;
+      }
 
-#menu-icon{
-  font-size: 3.5rem;
-  color: var(--main-color);
-  display: none;
-}
+      html {
+        font-size: 60%;
+        overflow-x: hidden;
+      }
 
-.logo{
-  font-size: 3rem;
-  color: var(--text-color);
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
+      body {
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
 
-.logo:hover{
-  transform:scale(1.1)
-}
+      /* HEADER */
+      .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 4rem 15%;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
 
-span{
-  background: linear-gradient(
-    270deg,
-    #ff9500 10%,
-     #ffff00 100%
-  );
-  background-clip: text;
-  color:transparent;
-  
-}
+      .logo {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #ffffff;
+      }
 
-.navbar a{
-  font-size: 1.8rem;
-  color: var(--text-color);
-  margin-left: 4rem;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
-  border-bottom: 3px solid  transparent;
-}
+      span {
+        background: linear-gradient(270deg, #ff9500 10%, #ffff00 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
 
-.navbar a:hover{
-  color: #ffff00;
-  border-bottom: 3px solid #ffff00;
-}
+      .navbar a {
+        font-size: 1.8rem;
+        color: #ffffff;
+        margin-left: 4rem;
+        border-bottom: 3px solid transparent;
+      }
 
-.gradient-btn{
-  font-size: 1.8rem;
-  padding: 1rem 2rem;
-  border-radius: 3rem;
-  background: linear-gradient(
-    270deg,
-     #ff9500 10%,
-     #ffff00 100%
-  );
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  color: #ffffff;
-  border: none;
-  text-wrap: nowarp;
-}
-.gradient-btn:hover{
-  transform: scale(1.05)
-}
+      .navbar a:hover {
+        color: #ffff00;
+        border-bottom: 3px solid #ffff00;
+      }
 
-section{
-  min-height: 100vh;
-  padding:10rem 15%;
-}
-.home{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15rem;
-}
+      .gradient-btn {
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+        background: linear-gradient(270deg, #ff9500 10%, #ffff00 100%);
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+      }
 
-.content{
-  display:flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-}
+      section {
+        min-height: 100vh;
+        padding: 10rem 15%;
+      }
 
-.content h1{
-  font-size: 8rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  line-height: 1;
-  color: #ffffff;
- 
-}
+      /* HOME */
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15rem;
+      }
 
-.content h3 {
-  margin: 1rem 0;
-  font-size: 4rem;
-  color: #ffffff;
-}
+      .content {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+      }
 
-.content p{
-  font-size:1.5rem;
-  font-weight:500;
-  line-height:1.8;
-  color: #ffffff;
-}
+      .content h1 {
+        font-size: 8rem;
+        color: #ffffff;
+      }
 
-.home-img img{
-  width: 32vw;
-  border-radius: 50%;
-  box-shadow: 0 0 25px #ffff00;
-  transition: 0.4s ease-in-out;
-}
+      .content h3 {
+        font-size: 4rem;
+        color: #ffffff;
+      }
 
-.home-img img:hover{
-  box-shadow: 0 0 25px #ffff00,
-              0 0 50px #ffff00,
-              0 0 100px #ffff00;
-  
-}
+      .content p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+      }
 
-#dl {
-  font-size: 6rem;
-  
-}
+      .home-img img {
+        width: 32vw;
+        border-radius: 50%;
+        box-shadow: 0 0 25px #ffff00;
+      }
 
-#dl2 {
-  font-size: 2.9rem;
-  
-}
+      .home-img:hover img {
+        box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00, 0 0 100px #ffff00;
 
-.social-icons a{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  padding: 1rem;
-  background: transparent;
-  border: 2px soild #ffff00;
-  border-radius:50%;
-  color: #ffff00;
-  margin: 3rem 0.5rem;
-  transition: 0.3s ease-in-out;
-}
+        transition: 0.3s ease-in-out;
+      }
 
-.social-icons a:hover{
-  color: #000000;
-  background-color: #ffff00;
-  transform: scale(1.2)translateY(-5px);
-  box-shadow:0 0 25px #ffff00;
-}
+      .social-icons a {
+        font-size: 3rem;
+        padding: 1rem;
+        border: 2px solid #ffff00;
+        border-radius: 50%;
+        color: #ffff00;
+        margin: 3rem 0.5rem;
+        display: inline-flex;
+      }
 
-.btn-group{
-  display: flex;
-  gap:1.5rem;
-}
+      .s:hover a {
+        box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00, 0 0 100px #ffff00;
+      }
 
-.btn{
-  display: inline-block;
-  padding: 1rem 3rem;
-  background-color: #ffff00;
-  box-shadow: 0 0 25px #ffff00;
-  border-radius: 3rem;
-  font-size: 1.8rem;
-  color:#080808;
-  border: 2px soild transparent;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-  
-}
+      .s2 {
+        box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00, 0 0 100px #ffff00;
 
-.btn:hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #ffff00,
-              0 0 50px #ffff00;
-              
-}
+        transition: 0.3s ease-in-out;
+      }
 
-.btn-group a:nth-of-type(2){
-  background-color: #080808;
-  color: #ffff00;
-  border: 2px soild #ffff00;
-  box-shadow: 0 0 25px transparent;
-}
+      .s3 {
+        box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00, 0 0 100px #ffff00;
 
-.btn-group a:nth-of-type(2):hover{
-  box-shadow:0 0 25px #ffff00;
-  background-color: #ffff00;
-  color: #080808;
+        transition: 0.3s ease-in-out;
+      }
 
-}
+      .btn {
+        padding: 1rem 3rem;
+        background: #ffff00;
+        color: #080808;
+        border-radius: 3rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        display: inline-block;
+      }
 
-.about{
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 10rem;
- background: var(--second-bg-color);
-}
+      /* ABOUT */
+      .about {
+        background: var(--second-bg-color);
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+      }
 
-.about-img img{
-  width:32vw;
-  border: 50%;
-  box-shadow: 0 0 25px #ffff00;
-  transition: 0.4s ease-in-out;
-  border-radius: 50%;
-}
+      .about-img img {
+        width: 32vw;
+        border-radius: 50%;
+        box-shadow: 0 0 25px #ffff00;
+      }
 
-.about-img img:hover{
-  box-shadow: 0 0 25px #ffff00,
-              0 0 50px #ffff00
-              0 0 100px #ffff00;
-}
+      .about-img:hover img {
+        box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00, 0 0 100px #ffff00;
 
-.about-content h2{
-  font-size: 7rem;
-  text-align: left;
-  color: #ffffff;
-}
+        transition: 0.3s ease-in-out;
+      }
 
-.about-content p {
-  font-size: 1.8rem;
-  color: #ffffff;
-}
+      .about-content h2 {
+        font-size: 7rem;
+      }
 
-.about-content .btn{
-  margin: 3rem 0;
-}
+      .about-content p {
+        font-size: 1.8rem;
+      }
 
-::-webkit-scrollbar{
-  width: 20px;
-}
+      /* SKILLS */
+      .heading {
+        text-align: center;
+        font-size: 7rem;
+        margin-bottom: 5rem;
+      }
 
-::-webkit-scrollbar-thumb{
-  background-color: #ffff00;
-}
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+      }
 
-::-webkit-scrollbar-track{
-  background-color: var(--bg-color);
-}
+      .skills-box {
+        background: #ffff00;
+        border-radius: 3rem;
+        padding: 4rem;
+        transition: 0.3s;
+      }
 
-.heading{
-  text-align:center ;
-  font-size: 7rem;
-  margin: 5rem 0;
-}
+      .skills-box:hover {
+        background: var(--second-bg-color);
+        color: #ffff00;
+        border: 5px solid #ffff00;
+      }
 
-.skills{
-  background-color: var(--bg-color);
-  color: #000000;
-}
+      .skills-info {
+        text-align: center;
+      }
 
-.skills h2{
-  color: var(--text-color)
-}
+      .skills-info i {
+        font-size: 8rem;
+        color: #000000;
+      }
 
-.skills-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(
-    300px, 1fr
-  ));
-  align-items: center;
-  gap: 2.5rem;
-  
-}
+      .skills-info h4 {
+        font-size: 4rem;
+        margin: 2rem 0;
+        color: #000000;
+      }
 
-.skills-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffff00;
-  height:600px;
-  border-radius: 3rem;
-  cursor: pointer;
-  border:5px soild transparent;
-  transition: 0.4s ease-in-out;
-}
+      .skills-info p {
+        font-size: 1.4rem;
+        line-height: 1.7;
+        color: #000000;
+      }
 
-.skills-box:hover{
-  background: var(--second-bg-color);
-  color:#ffff00;
-  border: 5px soild #ffff00;
-  transform: scale(1.03);
-  gap: 5rem;
-}
+      .skills-info:hover i {
+        color: #ffffff;
+      }
 
-.skills-info{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
-  
-}
+      .skills-info:hover h4 {
+        color: #ffffff;
+      }
 
-.skills-info h4{
-  font-size: 4rem;
-  margin: 2rem 0;
-  font-weight: 800;
-}
+      .skills-info:hover p {
+        color: #ffffff;
+      }
 
-.skills-info p{
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.7;
-}
+      h1 span {
+        display: inline; /* IMPORTANT */
+      }
 
-.skills-info i{
-  font-size: 8rem;
-}
-  </style>
-</head>
-<body>
-     <header class="header">
-      <a href="#home" class="logo">
-        Ayush <span>Kushwaha</span>
-      </a>
+      .projects {
+        background-color: #ffff00;
+      }
 
-      <i class="bx bx-menu" id="menu-icon"></i>
+      .projects-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        place-items: center;
+        gap: 3rem;
+        row-gap: 5rem;
+      }
+
+      .projects-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg-color);
+        border: 2px soild #ffff00;
+        border-radius: 3rem;
+        gap: 2rem;
+        padding: 5rem 2rem;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 0 5px #ffff00;
+        transition: 0.3s ease;
+      }
+
+      .projects-card:hover {
+        box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00;
+        transform: scale(1.02);
+      }
+
+      .projects-card img {
+        max-width: 300px;
+        border-radius: 2em;
+        object-fit: cover;
+      }
+
+      .projects-card h2 {
+        font-size: 3rem;
+      }
+
+      .projects-card p {
+        font-size: 1.6rem;
+      }
+
+      .contact {
+        background-color: var(--bg-color);
+      }
+
+      .contact h2 {
+        margin-bottom: 3rem;
+        color: var(--text-color);
+      }
+
+      .contact form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        margin: 5rem 0;
+        text-align: center;
+      }
+
+      .contact form .input-box input,
+      .contact form textarea {
+        width: 100%;
+        padding: 2.5rem;
+        font-size: 1.8rem;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        border-radius: 2rem;
+        border: 2px soild #ffff00;
+        margin: 1.5rem 0;
+        resize: none;
+      }
+
+      .footer {
+        background-color: var(--second-bg-color);
+        padding: 50px 0;
+      }
+
+      .footer .social-icons {
+        text-align: center;
+      }
+
+      .footer ul {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+
+      .footer ul li a {
+        color: #ffffff;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease-in-out;
+      }
+
+      .footer ul li a:hover {
+        border-bottom: 3px soild #ffff00;
+      }
+
+      .footer .copyright {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 16px;
+      }
+
+      .list {
+        list-style: none;
+        display: flex; /* makes them in a line */
+        justify-content: center; /* center horizontally */
+        gap: 30px; /* space between items */
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbar {
+        display: flex; /* ✅ horizontal */
+        align-items: center;
+        gap: 4rem;
+      }
+
+      #menu-icon {
+        font-size: 4rem; /* BIGGER */
+        color: #ffff00; /* YELLOW */
+        cursor: pointer;
+
+        transition: 0.3s ease; /* smooth icon change */
+      }
+
+      @media (max-width: 1285px) {
+        #menu-icon {
+          display: block; /* hide on big screens */
+        }
+        .navbar {
+          position: absolute;
+          top: 100%;
+          right: 0%;
+          width: 50%;
+          padding: 1rem 3rem;
+          background: rgba(0, 0, 0, 0.8);
+          border-bottom-left-radius: 2rem;
+          border-left: 2px solid #ffff00;
+          border-bottom: 2px solid #ffff00;
+
+          display: none;
+          flex-direction: column;
+        }
+
+        .navbar a {
+          display: block;
+          font-size: 2rem;
+          margin: 3rem 0;
+          color: var(--text-color);
+        }
+        .navbar.active {
+          display: block;
+        }
+
+        .gradient-btn {
+          display: none;
+        }
+
+        .home {
+          flex-direction: column-reverse;
+          margin: 5rem 0;
+          gap: 5rem;
+        }
+
+        .home-content {
+          align-items: center;
+          text-align: center;
+        }
+
+        .home-img img {
+          width: 56vw;
+        }
+
+        .about {
+          flex-direction: column-reverse;
+          text-align: center;
+        }
+
+        .about h2 {
+          text-align: center;
+          margin: 2rem 0;
+        }
+
+        .about img {
+          width: 52vw;
+        }
+        .contact form {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">Ayush <span>Kushwaha</span></a>
 
       <nav class="navbar">
-        <a href="#home" >Home</a>
-        <a href="#about" >About</a>
-        <a href="#skills" >Skills</a>
-        <a href="#projects" >Projects</a>
-        <a href="#contact" >Contacts</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contacts</a>
       </nav>
 
-      <button class="gradient-btn">Contact Me</button>
+      <button class="gradient-btn"><a href="#contact">Contact Me</a></button>
 
+      <i class="bx bx-menu" id="menu-icon"></i>
+    </header>
 
-     </header>
-
-     <section class="home" id="home">
+    <section class="home" id="home">
       <div class="content">
-        
-        <h1 id="dl">Hi, It's <span id="dl">Ayush</span></h1>
-        <h3>
-          I'm a <span id="dl2">Web Developer</span>
-        </h3>
-        <p id="dl3">A student and beginner web developer who enjoys creating websites and learning new technologies like HTML, CSS, and JavaScript. I’m passionate about improving my skills and building useful projects</p>
+        <h1>Hi, It's <span>Ayush</span></h1>
+        <h3>I'm a <span>Web Developer</span></h3>
+        <p>
+          A student and beginner web developer who enjoys learning HTML, CSS and
+          JavaScript.
+        </p>
+
         <div class="social-icons">
-          <a href="#" >
-            <i class="bx bxl-github"></i>
-          </a>
-
-          <a href="https://www.youtube.com/@Forker7" >
-            <i class="bx bxl-youtube"></i>
-          </a>
-
-          <a href="#" >
-            <i class="bx bxl-discord-alt"></i>
-          </a>
-
-          
+          <a href="https://github.com/Forker7"
+            ><i class="bx bxl-github" id="s"></i
+          ></a>
+          <a href="https://www.youtube.com/@Forker7" id="s1"
+            ><i class="bx bxl-youtube"></i
+          ></a>
+          <a href="https://discord.com/channels/1155382131330142261"
+            ><i class="bx bxl-discord-alt" id="s2"></i
+          ></a>
         </div>
 
-        <div class="btn-group">
-          <a href="#contact" class="btn">Contact</a>
-        </div>
+        <a href="#contact" class="btn">Contact</a>
       </div>
 
       <div class="home-img">
-        <img src="Ayush (1).png" alt="">
+        <img src="Ayush (1).png" alt="" />
       </div>
-     </section>
+    </section>
 
-     <section class="about" id="about">
+    <section class="about" id="about">
       <div class="about-img">
-        <img src="Ayush (1).png" alt="" class="about-img">
+        <img src="Ayush (1).jpg" alt="" />
       </div>
 
       <div class="about-content">
         <h2>About <span>Me</span></h2>
-        <p>Hi, I’m Ayush Kushwaha. Also known as ItzFork. I’m a student who enjoys learning new things and exploring technology.
-I like coding very much and enjoy building small projects while learning HTML, CSS, and JavaScript.
-Coding helps me think logically and improve my problem-solving skills.
-I also love playing sports, especially cricket and table tennis.
-My favourite cricketer is Virat Kohli, and I admire his dedication and consistency.
-In table tennis, my favourite player is Ma Long because of his speed and technique.
-Playing sports keeps me active, focused, and disciplined.
-Apart from that, I really enjoy eating and trying different foods.
-I like snacks such as samosa, pani puri, and chatpate, along with meals like chicken curry.
-Overall, I enjoy balancing coding, sports, and food in my daily life.</p>
+        <p>
+          Hi, I’m Ayush Kushwaha. Also known as ItzFork. I’m a student who
+          enjoys learning new things and exploring technology. I like coding
+          very much and enjoy building small projects while learning HTML, CSS,
+          and JavaScript. Coding helps me think logically and improve my
+          problem-solving skills.
+        </p>
 
-      <a href="#" class="btn">Read More</a>
+        <p id="section-2"></p>
+        <a href="#" class="btn" id="btnn" onclick="BTNN()">Read More</a>
       </div>
-     </section>
-     
-     <section class="skills" id="skills">
-      <h2 class="heading">Skills</h2>
+    </section>
 
+    <section class="skills" id="skills">
+      <h2 class="heading">Skills</h2>
 
       <div class="skills-container">
         <div class="skills-box">
           <div class="skills-info">
-
-          <i class="bx bx-html5"></i>
-          <h4>Html</h4>
-          <p>I have a good understanding of HTML and use it to create well-structured web pages. I can build layouts using headings, paragraphs, lists, links, images, and forms. I also focus on writing clean and organized code to make websites easy to understand and use.
-
-          </p> </div>
-         <div class="skills-box">
-          <div class="skills-info"></div>
-
-          <i class="bx bx-css3"></i>
-          <h4>CSS</h4>
-          <p>I use CSS to style web pages and make them visually attractive. I can work with colors, fonts, layouts, and basic animations to create clean and responsive designs.
-            
-          </p>
-          
-          <div class="skills-box">
-          <div class="skills-info"></div>
-
-          <i class="bx bx-javascript"></i>
-          <h4>JS</h4>
-          <p>I use JavaScript to add interactivity to websites. I can create simple functions, handle events, and make web pages more dynamic and user-friendly.
-            
-          </p>
+            <i class="bx bxl-html5"></i>
+            <h4>HTML</h4>
+            <p>Creating structured web pages using HTML.</p>
+          </div>
         </div>
-       </div>
 
         <div class="skills-box">
-          <div class="skills-info"></div>
-
-          <i class="bx bx-android"></i>
-          <h4>MIT App Inventor</h4>
-          <p>I use MIT App Inventor to create simple mobile applications. It helps me understand app logic, blocks-based programming, and how mobile apps work.
-            
-          </p>
+          <div class="skills-info">
+            <i class="bx bxl-css3"></i>
+            <h4>CSS</h4>
+            <p>Styling websites with colors, layouts, and animations.</p>
+          </div>
         </div>
-       </div>
 
-       <div class="skills-box">
-          <div class="skills-info"></div>
-
-          <i class="bx bx-dino"></i>
-          <h4>Scratch</h4>
-          <p>I use Scratch to create interactive stories, animations, and games. It helps me learn programming concepts like loops, conditions, and events in a fun way.
-            
-          </p>
+        <div class="skills-box">
+          <div class="skills-info">
+            <i class="bx bxl-javascript"></i>
+            <h4>JavaScript</h4>
+            <p>Adding interactivity and dynamic behavior.</p>
+          </div>
         </div>
-       </div>
 
-       <div class="skills-box">
-          <div class="skills-info"></div>
-
-          <i class="bx bx-table-tennis"></i>
-          <h4>Table Tennis</h4>
-          <p>Table tennis is a sport I enjoy playing regularly. I have learned fast serves, quick reflex shots, and smashes, which help improve my coordination and focus.
-            
-          </p>
+        <div class="skills-box">
+          <div class="skills-info">
+            <i class="bx bxl-android"></i>
+            <h4>MIT App Inventor</h4>
+            <p>Building simple mobile applications.</p>
+          </div>
         </div>
-       </div>
 
-       <div class="skills-box">
-          <div class="skills-info"></div>
-
-          <i class="bx bx-cricket"></i>
-          <h4>Cricket</h4>
-          <p>Cricket is one of my favorite sports.
-             I have good defending batting skills and basic bowling skills,
-              and playing cricket teaches me teamwork and discipline.
-            
-          </p>
+        <div class="skills-box">
+          <div class="skills-info">
+            <i class="bx bx-dino"></i>
+            <h4>Scratch</h4>
+            <p>Creating games and animations.</p>
+          </div>
         </div>
-       </div>
+
+        <div class="skills-box">
+          <div class="skills-info">
+            <i class="bx bx-cricket-ball"></i>
+            <h4>Cricket</h4>
+            <p>Teamwork, discipline, and batting skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="heading">Projects</h2>
+
+      <div class="projects-box">
+        <div class="projects-card">
+          <img src="Acp_Stop_changing_numbers.png" alt="" />
+
+          <h3>🎲 Rolling Dice</h3>
+
+          <p>A simple JavaScript dice with start, stop, and reset features.</p>
+          <div class="btn">
+            <a
+              href="https://github.com/Forker7/Day-36-Rolling-Dice-app-using-JS.git"
+              >Review Projects</a
+            >
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <img src="Acp_World_Weather_Teller_R4Rqhoj.png" alt="" />
+
+          <h3>🌡️Weather Application</h3>
+
+          <p>A simple API app Using MIT app inventor</p>
+          <div class="btn">
+            <a
+              href="https://gallery.appinventor.mit.edu/?galleryid=873bb5f9-2b2a-41b3-ba81-3545ff630ed8"
+              >Review Projects</a
+            >
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <img src="Acp_counter_application.png" alt="" />
+
+          <h3>⏱️ Stopwatch</h3>
+
+          <p>A simple Javasricpt stopwatch with start, stop and roll.</p>
+          <div class="btn">
+            <a href="https://github.com/Forker7/Day-35-Stopwatch-using-JS.git"
+              >Review Projects</a
+            >
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <img src="Acp_calendar.png" alt="" />
+
+          <h3>⏰ Digital Clock</h3>
+
+          <p>Digital CLock built with HTML and JS.</p>
+          <div class="btn">
+            <a href="https://github.com/Forker7/New-folder.git"
+              >Review Projects</a
+            >
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <img src="Acp_Prepare_a_shooping_list.png" alt="" />
+
+          <h3>📃 To Do List<</h3>
+
+          <p>To Do List built with HTML and JS.</p>
+          <div class="btn"><a href=""></a>Review Projects</div>
+        </div>
+
+        <div class="projects-card">
+          <img src="Acp_Telescope.png" alt="" />
+
+          <h3>🔭Telescope</h3>
+
+          <p>Basic Game Made by Scartch</p>
+          <div class="btn">
+            <a href="https://scratch.mit.edu/projects/1147117830"
+              >Review Projects</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form action="#">
+        <div class="inputgroup">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+          </div>
+
+          <div class="input-box">
+            <input type="number" placeholder="Phone Number" />
+            <input type="text" placeholder="Subject" />
+          </div>
+        </div>
+
+        <div class="inputgroup-2">
+          <textarea
+            name=""
+            id=""
+            placeholder="Your Message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+          <div
+            id="form-message"
+            style="color: #ff9500; margin-top: 1rem; font-size: 1.6rem"
+          ></div>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://github.com/Forker7"
+          ><i class="bx bxl-github" id="s"></i
+        ></a>
+        <a href="https://www.youtube.com/@Forker7" id="s1"
+          ><i class="bx bxl-youtube"></i
+        ></a>
+        <a href="https://discord.com/channels/1155382131330142261"
+          ><i class="bx bxl-discord-alt" id="s2"></i
+        ></a>
       </div>
 
-        
-        
-     </section>
-</body>
+      <ul class="list">
+        <li>
+          <a href="#">FQA</a>
+        </li>
+
+        <li>
+          <a href="#">Skills</a>
+        </li>
+
+        <li>
+          <a href="#">About Me</a>
+        </li>
+
+        <li>
+          <a href="#">Projects</a>
+        </li>
+
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+      </ul>
+
+      <p class="copyright">@ Ayush Kushwaha | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      let menuIcon = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle("bx-x");
+        navbar.classList.toggle("active");
+      };
+
+      const form = document.querySelector("form");
+      const nameInput = form.querySelector('input[type="text"]');
+      const emailInput = form.querySelector('input[type="email"]');
+      const phoneInput = form.querySelector('input[type="number"]');
+      const subjectInput = form.querySelectorAll('input[type="text"]')[1]; // second text input
+      const messageInput = form.querySelector("textarea");
+      const formMessage = document.getElementById("form-message");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // prevent actual submission
+
+        // Reset message
+        formMessage.textContent = "";
+
+        // Check each field
+        if (nameInput.value.trim() === "") {
+          formMessage.textContent = "Please enter your full name.";
+          nameInput.focus();
+          return;
+        }
+
+        if (emailInput.value.trim() === "") {
+          formMessage.textContent = "Please enter your email.";
+          emailInput.focus();
+          return;
+        }
+
+        if (phoneInput.value.trim() === "") {
+          formMessage.textContent = "Please enter your phone number.";
+          phoneInput.focus();
+          return;
+        }
+
+        if (subjectInput.value.trim() === "") {
+          formMessage.textContent = "Please enter a subject.";
+          subjectInput.focus();
+          return;
+        }
+
+        if (messageInput.value.trim() === "") {
+          formMessage.textContent = "Please enter your message.";
+          messageInput.focus();
+          return;
+        }
+
+        // Success
+        formMessage.style.color = "#00ff00";
+        formMessage.textContent = "Message sent successfully!";
+
+        // Optionally, reset form
+        form.reset();
+      });
+
+      function BTNN() {
+        if (document.getElementById("section-2").innerHTML === "") {
+          document.getElementById("section-2").innerHTML =
+            "I also love playing sports, especially cricket and table tennis.My favourite cricketer is Virat Kohli, and I admire his dedication and consistency.In table tennis, my favourite player is Ma Long because of his speed and technique.Playing sports keeps me active, focused, and disciplined.Apart from that, I really enjoy eating and trying different foods.I like snacks such as samosa, pani puri, and chatpate, along with meals like chicken curry.Overall, I enjoy balancing coding, sports, and food in my daily life.";
+          document.getElementById("btnn").innerHTML = "Read Less";
+        } else {
+          document.getElementById("btnn").innerHTML = "Read More";
+          document.getElementById("section-2").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
 </html>
